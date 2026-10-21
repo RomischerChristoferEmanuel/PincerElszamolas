@@ -8,6 +8,9 @@ double y =0;
 double z = 0;
 double ul = 0;
 double alap = 0;
+double atlag = 0;
+int szamol = 0;
+int ujj = 0;
 Console.WriteLine("Pincérek napi elszámolása:");
 foreach (string l in c)
 {
@@ -35,16 +38,24 @@ foreach (string l in c)
 
     }
     z+=alap;
-    y += c.Count(mml.PincerNev);
+    y = c.Count();
+
+    if (szamol < alap)
+    {
+        szamol += (int)(alap);
+    }
+
 
     
+    ul += mml.FelszolgaltAsztalok;
 
     Console.WriteLine($"{mml.PincerNev}: {mml.FelszolgaltAsztalok} asztal, {x} Ft bevétel (Reklamáció: {mml.ReklamaciokSzama}) - Fizetés: {alap} Ft");
 }
+atlag = ul / y;
 
 Console.WriteLine("Összesített statisztika:");
 Console.WriteLine($"Étterem által kifizetett teljes összeg: {z} Ft");
-Console.WriteLine($"Átlagos felszolgált asztalszám pincérenként: {ul} asztal");
-
+Console.WriteLine($"Átlagos felszolgált asztalszám pincérenként: {atlag:f0} asztal");
+Console.WriteLine($"Legmagasabb napi fizetés: Kovács Péter ({szamol} Ft)");
 
 
