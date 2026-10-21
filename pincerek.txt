@@ -1,0 +1,4 @@
+Kovács Péter;14;180000;0
+Nagy Anna;8;95000;2
+Szabó Gábor;20;250000;1
+Tóth Dóra;12;140000;0
