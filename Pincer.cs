@@ -7,7 +7,7 @@ namespace PincerElszamolas
     public class Pincer
     {
         public string PincerNev;
-        public int Felszolgaltasztalok;
+        public int FelszolgaltAsztalok;
         public int NapiBevetelFt;
         public int ReklamaciokSzama;
 
