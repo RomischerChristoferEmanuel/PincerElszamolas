@@ -48,10 +48,9 @@ foreach (string l in c)
         ujj = mml.PincerNev;
     }
 
-    if (mml.ReklamaciokSzama < 2)
+    if (mml.ReklamaciokSzama ==0)
     {
-        reklnel = mml.ReklamaciokSzama;
-        rekk = reklnel;
+        reklnel += 1;
     }
     
     ul += mml.FelszolgaltAsztalok;
@@ -64,6 +63,6 @@ Console.WriteLine("Összesített statisztika:");
 Console.WriteLine($"Étterem által kifizetett teljes összeg: {z} Ft");
 Console.WriteLine($"Átlagos felszolgált asztalszám pincérenként: {atlag:f0} asztal");
 Console.WriteLine($"Legmagasabb napi fizetés: {ujj} ({szamol} Ft)");
-Console.WriteLine($"Reklamáció nélkül dolgozó pincérek száma: {rekk} fő");
+Console.WriteLine($"Reklamáció nélkül dolgozó pincérek száma: {reklnel} fő");
 
 
